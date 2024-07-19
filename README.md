@@ -8,3 +8,6 @@ To run this project please run the fily main.py in your environtment and change 
 The changeable parameters can also be changed in the main.py file.
 
 example run prompt: python3 main.py  --filename test.txt  --t_max 864000  --initdecay 1
+
+
+note that sensitive.ipynb and integrator test.ipynb as well as the results and sensitivity analysis folders are sheerly for plotting and illustration purposes and hold not relevance to teh utilization of the model.
