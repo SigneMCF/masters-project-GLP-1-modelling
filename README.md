@@ -7,4 +7,4 @@ It is recommended to run this project on a server due to long computational requ
 To run this project please run the fily main.py in your environtment and change any parameters to your liking in the prompt.
 The changeable parameters can also be changed in the main.py file.
 
-example run prompt: python3 main.py --filename test.txt --t_max 864000 --initdecay 1
+example run prompt: python3 main.py  --filename test.txt  --t_max 864000  --initdecay 1
