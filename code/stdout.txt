@@ -1,0 +1,172 @@
+--------------------------------------------------------------------------------
+DEBUG INFORMATION:
+
+  TIME: 2022-05-23T05:21:54+00:00
+
+  NB_UID: 
+  NB_GID: 
+  NB_USER: 
+  NB_GROUP: 
+
+  DATALAB_USER: ubuntu
+  DATALAB_GROUP: ubuntu
+  DATALAB_USER_ID: 12574
+  DATALAB_GROUP_ID: 12574
+  DATALAB_USER_RECONFIGURE_FROM: ubuntu
+  DATALAB_RUNNING_AS_ROOT: 0
+  DATALAB_USER_HAS_CHANGED: 0
+  DATALAB_PREVIOUS_USER_EXISTS: 1
+  DATALAB_CURRENT_WORKDIR_IS_PREVIOUS_USER: 0
+  DATALAB_CHANGE_UID: 0
+  DATALAB_CHANGE_GID: 0
+  DATALAB_RUNNING_AS_ROOT: 0
+--------------------------------------------------------------------------------
+Container must be run as root to revoke sudo permissions
+Executing the command: jupyter lab
+**Note: Removing dead /tmp/tmp.3e999El8v5/jupyterlab menu "jupyterlab_menu"
+/opt/local/python/conda/lib/python3.9/site-packages/jupyter_server_mathjax/app.py:40: FutureWarning: The alias `_()` will be deprecated. Use `_i18n()` instead.
+  help=_("""The MathJax.js configuration file that is to be used."""),
+[I 2022-05-23 05:21:56.682 ServerApp] jupyter_rsession_proxy | extension was successfully linked.
+[I 2022-05-23 05:21:56.688 ServerApp] jupyter_server_mathjax | extension was successfully linked.
+[I 2022-05-23 05:21:56.688 ServerApp] jupyter_server_proxy | extension was successfully linked.
+[I 2022-05-23 05:21:56.699 ServerApp] jupyterlab | extension was successfully linked.
+[I 2022-05-23 05:21:56.699 ServerApp] jupyterlab_git | extension was successfully linked.
+[I 2022-05-23 05:21:56.699 ServerApp] jupyterlab_snippets | extension was successfully linked.
+[I 2022-05-23 05:21:56.699 ServerApp] jupyterlab_templates | extension was successfully linked.
+[I 2022-05-23 05:21:56.699 ServerApp] jupytext | extension was successfully linked.
+[I 2022-05-23 05:21:56.710 ServerApp] Writing Jupyter server cookie secret to /home/ubuntu/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2022-05-23 05:21:56.900 ServerApp] jupyter_nbextensions_configurator | extension was found and enabled by nbclassic. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-05-23 05:21:56.900 ServerApp] jupyter_nbextensions_configurator | extension was successfully linked.
+[I 2022-05-23 05:21:56.901 ServerApp] nbclassic | extension was successfully linked.
+[I 2022-05-23 05:21:56.901 ServerApp] nbdime | extension was successfully linked.
+[I 2022-05-23 05:21:56.901 ServerApp] nbgitpuller | extension was successfully linked.
+[I 2022-05-23 05:21:56.901 ServerApp] voila.server_extension | extension was successfully linked.
+[W 2022-05-23 05:21:56.934 ServerApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+[I 2022-05-23 05:21:56.943 ServerApp] nbclassic | extension was successfully loaded.
+[I 2022-05-23 05:21:56.944 ServerApp] [jupyter_nbextensions_configurator] enabled 0.4.1
+[I 2022-05-23 05:21:56.944 ServerApp] jupyter_nbextensions_configurator | extension was successfully loaded.
+[I 2022-05-23 05:21:57.226 ServerApp] jupyter_rsession_proxy | extension was successfully loaded.
+[I 2022-05-23 05:21:57.228 ServerApp] jupyter_server_mathjax | extension was successfully loaded.
+[I 2022-05-23 05:21:57.514 ServerApp] jupyter_server_proxy | extension was successfully loaded.
+[I 2022-05-23 05:21:57.515 LabApp] JupyterLab extension loaded from /opt/local/python/conda/lib/python3.9/site-packages/jupyterlab
+[I 2022-05-23 05:21:57.515 LabApp] JupyterLab application directory is /opt/local/python/conda/share/jupyter/lab
+[I 2022-05-23 05:21:57.519 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2022-05-23 05:21:57.527 ServerApp] jupyterlab_git | extension was successfully loaded.
+[I 2022-05-23 05:21:57.527 ServerApp] jupyterlab_snippets | extension was successfully loaded.
+[I 2022-05-23 05:21:57.529 ServerApp] jupyterlab_templates | extension was successfully loaded.
+[I 2022-05-23 05:21:57.529 ServerApp] [Jupytext Server Extension] Deriving a JupytextContentsManager from LargeFileManager
+[I 2022-05-23 05:21:57.530 ServerApp] jupytext | extension was successfully loaded.
+[I 2022-05-23 05:21:57.625 ServerApp] nbdime | extension was successfully loaded.
+[I 2022-05-23 05:21:57.626 ServerApp] nbgitpuller | extension was successfully loaded.
+[I 2022-05-23 05:21:57.630 ServerApp] voila.server_extension | extension was successfully loaded.
+[I 2022-05-23 05:21:57.630 ServerApp] Will shut down after 432000 seconds with no kernels or terminals.
+[I 2022-05-23 05:21:57.631 ServerApp] Serving notebooks from local directory: /mnt
+[I 2022-05-23 05:21:57.631 ServerApp] Jupyter Server 1.13.1 is running at:
+[I 2022-05-23 05:21:57.631 ServerApp] http://run-628b19d70028114372cd4b8e-ts9wq:8888/jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/lab
+[I 2022-05-23 05:21:57.631 ServerApp]  or http://127.0.0.1:8888/jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/lab
+[I 2022-05-23 05:21:57.631 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2022-05-23 05:21:58.380 ServerApp] 302 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/ (100.96.15.106) 0.78ms
+[I 2022-05-23 05:21:58.654 ServerApp] 302 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/ (100.96.15.106) 0.53ms
+[I 2022-05-23 05:21:59.084 ServerApp] 302 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/ (100.96.15.106) 0.52ms
+[I 2022-05-23 05:22:40.377 LabApp] Build is up to date
+[I 2022-05-23 05:28:50.564 ServerApp] Writing notebook-signing key to /home/ubuntu/.local/share/jupyter/notebook_secret
+[W 2022-05-23 05:28:50.567 ServerApp] Notebook results/cellsystem_nb.ipynb is not trusted
+[I 2022-05-23 05:28:53.039 ServerApp] Kernel started: 6bed15f1-b33a-457a-9608-29e6556a6ea8
+[I 2022-05-23 05:28:53.040 ServerApp] Culling kernels with idle durations > 86400 seconds at 300 second intervals ...
+[I 2022-05-23 05:48:27.007 ServerApp] Saving file at /results/cellsystem.py
+[I 2022-05-23 05:48:50.149 ServerApp] Saving file at /results/parameters_df.py
+[I 2022-05-23 05:50:27.267 ServerApp] Saving file at /results/cellsystem.py
+[I 2022-05-23 05:52:27.671 ServerApp] Saving file at /results/cellsystem.py
+[I 2022-05-23 05:54:54.620 ServerApp] Creating new file in /results
+[I 2022-05-23 05:56:30.059 ServerApp] Saving file at /results/cellsystem.py
+[I 2022-05-23 05:56:55.909 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:01:20.630 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:03:20.791 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:05:21.870 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:07:22.147 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:09:22.306 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:11:22.486 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:13:17.523 ServerApp] Saving file at /results/cellsystem.py
+[I 2022-05-23 06:13:22.653 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:15:22.864 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:17:23.043 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:21:23.325 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:23:23.586 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:25:23.749 ServerApp] Saving file at /results/untitled.py
+[I 2022-05-23 06:27:23.972 ServerApp] Saving file at /results/untitled.py
+[W 2022-05-23 06:28:49.983 ServerApp] 404 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/results/main.py?1653287329935 (100.96.15.106): No such file or directory: results/main.py
+[W 2022-05-23 06:28:49.983 ServerApp] No such file or directory: results/main.py
+[W 2022-05-23 06:28:49.983 ServerApp] 404 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/results/main.py?1653287329935 (100.96.15.106) 1.26ms referer=https://nneapdomino-prd.corp.aws.novonordisk.com/jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/lab/tree/results/untitled.py
+[W 2022-05-23 06:28:50.059 ServerApp] 404 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/results/main.py?content=0&1653287330013 (100.96.15.106): No such file or directory: results/main.py
+[W 2022-05-23 06:28:50.059 ServerApp] No such file or directory: results/main.py
+[W 2022-05-23 06:28:50.059 ServerApp] 404 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/results/main.py?content=0&1653287330013 (100.96.15.106) 1.42ms referer=https://nneapdomino-prd.corp.aws.novonordisk.com/jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/lab/tree/results/untitled.py
+[I 2022-05-23 06:28:50.132 ServerApp] Uploading file to /results/main.py
+[W 2022-05-23 06:28:50.226 ServerApp] 409 PATCH /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/results/main.py?1653287330169 (100.96.15.106): File already exists: results/untitled.py
+[W 2022-05-23 06:28:50.226 ServerApp] File already exists: results/untitled.py
+[W 2022-05-23 06:28:50.226 ServerApp] 409 PATCH /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/results/main.py?1653287330169 (100.96.15.106) 12.02ms referer=https://nneapdomino-prd.corp.aws.novonordisk.com/jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/lab/tree/results/untitled.py
+[I 2022-05-23 06:29:21.813 ServerApp] Creating new directory in /results
+[I 2022-05-23 06:30:24.820 ServerApp] Saving file at /results/main.py
+[I 2022-05-23 06:30:30.033 ServerApp] New terminal with automatic name: 1
+TermSocket.open: 1
+not able to serialize: expected string or bytes-like object
+TermSocket.open: Opened 1
+[I 2022-05-23 06:34:50.739 ServerApp] Saving file at /results/main.py
+[I 2022-05-23 06:35:05.471 ServerApp] Saving file at /results/main.py
+[I 2022-05-23 06:35:13.606 ServerApp] Saving file at /results/main.py
+[I 2022-05-23 06:40:52.529 ServerApp] Saving file at /results/main.py
+[I 2022-05-23 06:41:36.658 ServerApp] New terminal with automatic name: 2
+TermSocket.open: 2
+not able to serialize: expected string or bytes-like object
+TermSocket.open: Opened 2
+[I 2022-05-23 06:42:43.507 ServerApp] Creating new directory in /results
+[W 2022-05-23 06:48:40.479 ServerApp] 404 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/main.py?1653288520008 (100.96.15.106): No such file or directory: main.py
+[W 2022-05-23 06:48:40.479 ServerApp] No such file or directory: main.py
+[W 2022-05-23 06:48:40.480 ServerApp] 404 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/main.py?1653288520008 (100.96.15.106) 1.25ms referer=https://nneapdomino-prd.corp.aws.novonordisk.com/jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/lab/tree/code/main.py
+[W 2022-05-23 06:48:40.562 ServerApp] 404 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/main.py?content=0&1653288520519 (100.96.15.106): No such file or directory: main.py
+[W 2022-05-23 06:48:40.562 ServerApp] No such file or directory: main.py
+[W 2022-05-23 06:48:40.563 ServerApp] 404 GET /jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/api/contents/main.py?content=0&1653288520519 (100.96.15.106) 1.04ms referer=https://nneapdomino-prd.corp.aws.novonordisk.com/jfgb/88-GLP1_uptake_dynamics/notebookSession/628b19d70028114372cd4b8e/lab/tree/code/main.py
+[I 2022-05-23 06:48:40.647 ServerApp] Uploading file to /main.py
+[W 2022-05-23 06:49:02.391 ServerApp] delete /code/main.py
+[I 2022-05-23 06:49:19.343 ServerApp] Creating new file in 
+[W 2022-05-23 06:49:30.754 ServerApp] delete /Resut.txt
+[I 2022-05-23 06:49:37.543 ServerApp] Creating new directory in 
+[I 2022-05-23 06:49:42.838 ServerApp] Creating new directory in 
+[I 2022-05-23 06:53:00.131 ServerApp] Saving file at /main.py
+[I 2022-05-23 06:55:00.307 ServerApp] Saving file at /main.py
+[I 2022-05-23 06:56:37.591 ServerApp] Saving file at /main.py
+[I 2022-05-23 06:57:18.090 ServerApp] New terminal with automatic name: 3
+TermSocket.open: 3
+not able to serialize: expected string or bytes-like object
+TermSocket.open: Opened 3
+[W 2022-05-23 06:57:47.559 ServerApp] delete /Log/test_example.csv
+[W 2022-05-23 06:58:52.705 ServerApp] delete /Results/filename
+[I 2022-05-23 06:58:54.842 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:00:06.043 ServerApp] Saving file at /code/cellsystem.py
+[I 2022-05-23 07:00:15.487 ServerApp] Saving file at /code/cellsystem.py
+[W 2022-05-23 07:00:27.101 ServerApp] delete /Results/filename
+[I 2022-05-23 07:02:55.024 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:06:55.362 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:08:10.367 ServerApp] Saving file at /code/cellsystem_nb.ipynb
+[I 2022-05-23 07:08:10.368 ServerApp] Saving cellsystem_nb.ipynb
+[W 2022-05-23 07:08:10.368 ServerApp] Notebook code/cellsystem_nb.ipynb is not trusted
+[I 2022-05-23 07:08:48.345 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:10:48.618 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:12:48.825 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:14:10.779 ServerApp] Saving file at /code/cellsystem_nb.ipynb
+[I 2022-05-23 07:14:10.780 ServerApp] Saving cellsystem_nb.ipynb
+[W 2022-05-23 07:14:10.780 ServerApp] Notebook code/cellsystem_nb.ipynb is not trusted
+[I 2022-05-23 07:14:49.026 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:16:11.292 ServerApp] Saving file at /code/cellsystem_nb.ipynb
+[I 2022-05-23 07:16:11.292 ServerApp] Saving cellsystem_nb.ipynb
+[W 2022-05-23 07:16:11.293 ServerApp] Notebook code/cellsystem_nb.ipynb is not trusted
+[I 2022-05-23 07:16:49.236 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:18:49.490 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:20:11.835 ServerApp] Saving file at /code/cellsystem_nb.ipynb
+[I 2022-05-23 07:20:11.836 ServerApp] Saving cellsystem_nb.ipynb
+[W 2022-05-23 07:20:11.836 ServerApp] Notebook code/cellsystem_nb.ipynb is not trusted
+[I 2022-05-23 07:20:49.768 ServerApp] Saving file at /main.py
+[I 2022-05-23 07:20:50.928 ServerApp] Saving file at /main.py
+Websocket closed
+Websocket closed
+Websocket closed
+[I 2022-05-23 07:26:49.344 ServerApp] Starting buffering for 6bed15f1-b33a-457a-9608-29e6556a6ea8:9977c53c-3f4c-4b9e-9e9a-896fb58e9790
