@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.optimize import fsolve
-
+# this entire piece of code is pretty self explanotory and holds the framework for the equilibrium calculation.
 class CellModel:
     
     def __init__(self):
