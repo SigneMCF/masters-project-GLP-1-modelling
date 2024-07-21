@@ -16,11 +16,11 @@ from cellmodel import CellModel
 import os
 
 debug=0
-
+# old diffusion
 # diffusion integrator for initial state. this one has a faulty decay term.
 #def diffusion2(x,d,t,c0,x0,loss):
 #    return(c0*np.exp(-loss*t)*(1-special.erf((x-x0)/(np.sqrt(4*d*t)))))
-
+# current diffusion
 def diffusion2(x,d,t,c0,x0,loss):
     u0=(x-x0)/np.sqrt(2*d*t)
     res=np.ones(len(x))
@@ -40,7 +40,7 @@ def integrator(c0,d,t,xvec):
         totallength+=xvec[i]
     return cells
 
-# this is where log timing start, we can potentiall fiddle with this for linear time.
+# this is where log timing start, we can fiddle with this for linear time.
 
 def LogSpacing(first,last,step_pr_decade):
     if debug==1:
@@ -57,10 +57,12 @@ def Const_LogSpacing(first,last,step_pr_decade,repeats):
     if (new_first>last):
         return equil
     return np.concatenate((equil,LogSpacing(new_first,last,step_pr_decade))) #used for time initializations
-
+    
+# this is for the old variant with advection.
 def half_length(p):
     return np.log(2)*2*p.D/(np.sqrt(p.v*p.v+4*p.D*p.decay)-p.v)
-
+    
+# these are our gradients and diffs. Note that some of these tech
 def Divergence(r,v):
     v_sp=InterpolatedUnivariateSpline(r, v, k=2)
     d_v=v_sp.derivative()
@@ -82,14 +84,14 @@ def Laplace(r,v):
     d_v=v_sp.derivative()
     d_v2=v_sp.derivative(2)
     return 2/r*d_v(r)+d_v2(r)
-
+# finds indices
 def find_indices(avec,values):
     indices=np.zeros([len(values)],dtype=int)
     for i in range(0,len(values)):
         indices[i]=np.argmin(abs(avec-values[i]))
     return indices
 
-
+# defines the states etc.
 class CellSystem:
     
     def __init__(self,parameters):
@@ -135,7 +137,7 @@ class CellSystem:
             self._file_obj=open(fullname,'a')
         else:
             self._file_obj=None
-    
+# to write our results    
     def _write_to_file(self,t,Lall):
         if not self._file_obj is None:
             Lall_txt='\t'.join(np.array(Lall,'str'))
@@ -145,7 +147,7 @@ class CellSystem:
     def _close_file(self):
         if self._file_obj is not None:
             self._file_obj.close()
-    
+    # to read our results, remember we only save the Lall, and calculate everything from that
     def read_file(self,file,solve_for_cells=True):
         with open(file,"r") as f:
             content=f.readlines()
@@ -165,17 +167,17 @@ class CellSystem:
         if solve_for_cells:
             self._solve_for_cells()
 
-        
+     # get our simulation distances and makes segments   
     def get_r(self):
         return np.linspace(self.P.get('r_min'),self.P.get('r_max'),self.N_r)
-    
+    # gets all our parameters and the geometry
     def set_parameters(self,parameters):
         self.P=parameters
         self.cellmodel.set(parameters)
         self.cellmodel.set_geometry('bulk_and_surface',parameters.get('epsilon'))
  
 
-    # here be the boundary conditions, to me i cant see a decaying boundary, but its here that it would have to be implemented.
+    # here be the boundary conditions yarrr,  for future work this is where the decaying source could be implemented.
 
     def set_boundary(self,type="fixed"):
         if type=="reservoir" or type=="fixed":
@@ -187,7 +189,7 @@ class CellSystem:
         else:
             print("Unrecognized boundary type")
             
-    
+    # sets some time and space things
     def _set_FEM(self,T,r_vector=None):
         self.T=T
         self.N_t=len(T)
@@ -200,7 +202,7 @@ class CellSystem:
             self.N_r=len(r_vector)
     
     def _allocate(self):
-        # how about here?
+        # allocate, including some old variants.
 
         self.L=np.zeros([self.N_t,self.N_r])
         #self.L[0,:]+=initconc
@@ -222,10 +224,10 @@ class CellSystem:
         self.init_solutions=np.zeros([self.N_r,len(self.cellmodel.molecule_enum)])
 
         
-        # init solutions here
+       
         
         self.integrated_GRL=np.zeros([self.N_t]) 
-    
+    # initial condition profiles, most of these are old and not used.
     def _set_profile(self,profile):
         if 'L0' in profile:
             self.L0=profile['L0'] #start concentration in nM at r=r_min
@@ -265,7 +267,7 @@ class CellSystem:
             print("Cannot recognize "+profile['type']+" as a profile type: Options are flat,linear,soft, dirac or last")
             return False                                
         
-    
+    # intialization
         
     def _initialize(self,T,r_vector,profile): #T is end time , r_vector is vector of radii for simulation
  
@@ -292,6 +294,8 @@ class CellSystem:
         #initconc=integrator(self.L0,self.D,self.t_init,xvec)
         #self.init_solutions[0,:]=initconc
         # question is how to change it in this because i feel the cells get initialised every time we generate a new solution.
+
+
     def _initialize_cells(self,from_tot=False):
         last_solution=None
 
