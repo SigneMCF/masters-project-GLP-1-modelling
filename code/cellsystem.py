@@ -286,16 +286,11 @@ class CellSystem:
     
     
     
-        # inserting the start vector for the forced initial concentrations
+
         
-         # initial concentrations,t_min can be manually set by run now , shouldn't be t-min though because
-        # tmin is the smallest timestep size, and not time in system at start
-        #xvec=np.ones(self.N_r)*round(self.r_max/self.N_r)
-        #initconc=integrator(self.L0,self.D,self.t_init,xvec)
-        #self.init_solutions[0,:]=initconc
-        # question is how to change it in this because i feel the cells get initialised every time we generate a new solution.
 
 
+# initilization for each segment
     def _initialize_cells(self,from_tot=False):
         last_solution=None
 
@@ -326,7 +321,7 @@ class CellSystem:
         
         self._last_solutions=np.ndarray.copy(self.init_solutions)
         self.cellmodel.L=None 
-    
+    # solving the segments
     def _solve_for_cells(self,at_indices=None):
         if debug==1:
             print("running solve for cells")
@@ -362,10 +357,9 @@ class CellSystem:
             self.integrated_GRL[ti]=receptor_vol_frac*1E-24*Integrate(self.r,self.GRL[ti,:]) #1E-24 to get from (nm^3)-> liter
         self._solved_for_cells=True
     
-    #def calc_l_c(self,ltot): #not correct currently with two types of receptors
-    #    return 0.5*(ltot-(self.P.K_D_clearance+self.P.rho)+np.sqrt(np.power(ltot-(self.P.K_D_clearance+self.P.rho),2)+4*ltot*self.P.K_D_clearance))
 
-    #Total free receptor concentration:
+
+  # this is where diffusion and stuff happens, aka the actual differential part.
     
     def dLall_dt(self,Lall,t):
         self._number_of_calls=self._number_of_calls+1
@@ -451,7 +445,7 @@ class CellSystem:
             self._solve_for_cells()
             
         self.last_L=np.ndarray.copy(self.L[-1,:])
-    
+    # this is to run things
     def run(self,T=None): #init_type='diffusion'
         if debug==1:
             print("running run,heh")
@@ -467,13 +461,13 @@ class CellSystem:
         profile['length']=0.025
         self.solve(T=T,profile=profile,solve_for_cells=False)
     
-    
+    # indicing
     def find_indices(self,hours=None):
         if hours is None:
             return None
         tr=find_indices(self.T,hours*3600)
         return tr
-              
+    # some built in plots, these are used primarily to get an understanding of the long time model equilibria     
     def plot(self,indices=None):
         if debug==1:
             print("running plot")
@@ -545,7 +539,8 @@ class CellSystem:
         
         plt.show()
         
-    
+# the last parts are mostly outdated and were used for bugfixing and old runs .    
+
    # def get_last(self):
    #     val_dict=dict()
    #     unit_dict=dict()   
